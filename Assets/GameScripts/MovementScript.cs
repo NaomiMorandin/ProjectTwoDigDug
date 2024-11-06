@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour
 {
-    
+    public float movementMultiplier = 1f;
     
     // Start is called before the first frame update
     void Start()
@@ -20,9 +20,29 @@ public class MovementScript : MonoBehaviour
 
     void Control2DInput()
     {
+        int x = 0;
+        int y = 0;
         if (Input.GetKey(KeyCode.S))
         {
-            this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-1f);
+            y += -1;
         }
+        
+        if (Input.GetKey(KeyCode.D))
+        {
+            x += 1;
+        }
+        if(Input.GetKey(KeyCode.W))
+        {
+            y += 1;
+        }
+        if(Input.GetKey(KeyCode.A))
+        {
+            x += -1;
+        }
+        this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y) * movementMultiplier;
+
     }
-}
+
+
+    }
+
