@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+
     public CharacterStats cs;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //if (cs.playerAlive) 
+
 
     }
 }

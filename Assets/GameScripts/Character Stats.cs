@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
 {
-
+ 
     public int health = 30;
-    public int attackDamage = 15;
     public bool playerAlive = true;
 
 
@@ -19,7 +18,17 @@ public class CharacterStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    public void OnPlayerDamage()
+    {
         if (health <= 0)
-            playerAlive = false;
+            Die();
+    }
+    public void Die()
+    {
+        Destroy(gameObject);
+        Debug.Log("Player has died");
     }
 }
