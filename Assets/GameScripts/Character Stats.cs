@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CharacterStats : MonoBehaviour
 {
 
@@ -9,12 +10,15 @@ public class CharacterStats : MonoBehaviour
     public bool playerAlive = true;
     public GameObject restartButton;
     public GameObject youDied;
-
+    SpriteRenderer m_SpriteRenderer;
+    Color m_NewColor;
+    float m_Red, m_Blue, m_Green;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -31,6 +35,11 @@ public class CharacterStats : MonoBehaviour
             restartButton.SetActive(true);
             youDied.SetActive(true);
             Destroy(gameObject);
+        }
+        if (health <= 10)
+        {
+
+            m_SpriteRenderer.color = Color.red;
         }
 
     }
