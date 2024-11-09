@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SwordScript : MonoBehaviour
 {
+    
+    ShrubScript onHit;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +22,11 @@ public class SwordScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("hit");
-        if (other.gameObject.CompareTag("Shrub"))
+        if (other.gameObject.CompareTag("BadShrub"))
         {
-            other.gameObject.SetActive(false);
+            Physics2D.IgnoreCollision(other, GetComponent<BoxCollider2D>(), true);
         }
+        Debug.Log("hit");
         if (other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.SetActive(false);

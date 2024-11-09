@@ -145,6 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goodShrubPrefab: {fileID: 1353005301617523254, guid: 1c3f06c6729dd9d4e8705f7972b7ae95, type: 3}
+  badShrubPrefab: {fileID: 973288549879489659, guid: e06840d9e9c220a4cbaff263e13343ab, type: 3}
+  x: 0
 --- !u!50 &2293546076746909603
 Rigidbody2D:
   serializedVersion: 4
