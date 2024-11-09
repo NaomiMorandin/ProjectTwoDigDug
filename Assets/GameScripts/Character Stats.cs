@@ -41,7 +41,7 @@ public class CharacterStats : MonoBehaviour
         if (other.gameObject.CompareTag("BadShrub"))
         {
             OnPlayerDamage();
-            health = health - 1;
+            health = health - 2;
         }
     }
     private void OnCollisionEnter2D(Collision2D other)

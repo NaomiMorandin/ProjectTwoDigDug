@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4788904735415908837}
   - component: {fileID: 8260244923797638317}
   - component: {fileID: 6328354930290903709}
+  - component: {fileID: 8904694964335431342}
   m_Layer: 0
   m_Name: DestroyedShrubHazard
   m_TagString: BadShrub
@@ -101,7 +102,7 @@ BoxCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 11
+  m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &8904694964335431342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973288549879489659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8fda3a5145e63f4a802213850ee5958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

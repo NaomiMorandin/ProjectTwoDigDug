@@ -22,12 +22,10 @@ public class SwordScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("BadShrub"))
-        {
-            Physics2D.IgnoreCollision(other, GetComponent<BoxCollider2D>(), true);
-        }
+
         Debug.Log("hit");
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other != null && other.gameObject.CompareTag("Enemy"))
+            //defensive code, checks for null before using the perameter, failsafe
         {
             other.gameObject.SetActive(false);
         }
