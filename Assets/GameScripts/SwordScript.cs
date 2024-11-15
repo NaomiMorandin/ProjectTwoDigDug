@@ -6,7 +6,6 @@ using UnityEngine;
 public class SwordScript : MonoBehaviour
 {
     
-    ShrubScript onHit;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +27,18 @@ public class SwordScript : MonoBehaviour
             //defensive code, checks for null before using the perameter, failsafe
         {
             other.gameObject.SetActive(false);
+            DestroyEnemy();
+        }
+    }
+    private void DestroyEnemy()
+    {
+        //when enemy destroyed, check if enemyCount == 0
+        GameManager gm = GameObject.FindAnyObjectByType<GameManager>();
+        gm.enemyCount--;
+
+        if (gm.enemyCount <= 0)
+        {
+            gm.ShowWinUI();
         }
     }
 }

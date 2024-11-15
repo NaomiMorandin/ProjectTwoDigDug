@@ -12,26 +12,25 @@ public class GameManager : MonoBehaviour
     public CharacterStats cs;
     public GameObject youWin;
     public GameObject startOver;
+    public int enemyCount = 0;
+    public bool canMove = true;
+   
     // Start is called before the first frame update
     void Start()
     {
-        GameObject[] gos;
-        gos = GameObject.FindGameObjectsWithTag("Enemy");
-        count = gos.Length;
+       
+        
+        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        //enemy count is set to the number of game objects with the tag Enemy
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameObject[] gos;
-        gos = GameObject.FindGameObjectsWithTag("Enemy");
-        count = gos.Length;
 
-        if (count == 0)
-        {
-            youWin.SetActive(true);
-            startOver.SetActive(true);
-        }
+
 
     }
 
@@ -39,16 +38,25 @@ public class GameManager : MonoBehaviour
     {
         tutorial.SetActive(false);
         tutorialButton.SetActive(false);
+        //when function is called from button press, turn off the tutorial.
     }
     
     public void RestartGame()
     {
         UnityEngine.SceneManagement.Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+        //when restart game function is called, it reloads the current active scene.
     }
-    
+    public void ShowWinUI()
+    {
+        youWin.SetActive(true);
+        startOver.SetActive(true);
+        canMove = false;
+    }
     public void YouWin()
     {
+
         SceneManager.LoadScene("Start Game");
+        //when you win function is called, set the UI for winning active and 
     }
     
 }

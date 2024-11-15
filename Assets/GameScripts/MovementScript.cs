@@ -21,7 +21,16 @@ public class MovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Control2DInput();
+        GameManager gm = GameObject.FindAnyObjectByType<GameManager>();
+        if (gm != null && gm.canMove == true)
+        {
+            Control2DInput();
+            
+        }
+        else
+        {
+            this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0) * movementMultiplier;
+        }
 
     }
 
