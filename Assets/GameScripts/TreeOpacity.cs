@@ -16,7 +16,7 @@ public class TreeOpacity : MonoBehaviour
         {
             m_SpriteRenderer = GetComponent<SpriteRenderer>();
 
-            m_SpriteRenderer.color.a = 155f; 
+            //m_SpriteRenderer.color.a = 155f; 
         }
     }
     // Start is called before the first frame update
