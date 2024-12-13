@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject startOver;
     public int enemyCount = 0;
     public bool canMove = true;
+    
    
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
         
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
         //enemy count is set to the number of game objects with the tag Enemy
-
+        
 
     }
 
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-
+       
 
     }
 

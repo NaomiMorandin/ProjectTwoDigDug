@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyMovementScript : MonoBehaviour
@@ -25,7 +26,7 @@ public class EnemyMovementScript : MonoBehaviour
         rb.AddForce(movement * maxSpeed);
     }
 
-
+    
     
     
 }

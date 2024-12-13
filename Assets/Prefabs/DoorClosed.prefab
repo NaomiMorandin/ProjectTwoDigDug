@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 7671865926806905383}
   - component: {fileID: 4103458803709131033}
   - component: {fileID: 8803603393438116242}
+  - component: {fileID: 1697779215133802049}
   m_Layer: 0
   m_Name: DoorClosed
   m_TagString: Untagged
@@ -111,7 +112,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.491, y: -8.012, z: 0}
-  m_LocalScale: {x: 6.2584944, y: 6.2584944, z: 6.2584944}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7148219757534408249}
@@ -250,3 +251,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1697779215133802049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064984585574078383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4e43a58efe2c2419bd3d91b53b806a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpen: {fileID: 5210986083805890956, guid: c4dacaf99f28cd749a856b67addcbf6b, type: 3}
