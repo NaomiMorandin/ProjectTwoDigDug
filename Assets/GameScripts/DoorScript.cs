@@ -7,16 +7,12 @@ public class DoorScript : MonoBehaviour
     public GameObject doorOpen;
     public int key = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         key = GameObject.FindGameObjectsWithTag("Key").Length;
+        //make a count of all the keys in the scene.
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -26,6 +22,7 @@ public class DoorScript : MonoBehaviour
         {
             OnHit();
             gameObject.SetActive(false);
+            //when a player touches the door, if there are no keys in the scene (because they were collected) run the on hit script, and turn off the closed door
         }
     }
 
@@ -40,6 +37,7 @@ public class DoorScript : MonoBehaviour
             Destroy(enemy); 
         }
         gm.ShowWinUI();
+        //Hide the key in the UI, instantiate an open door object, destroy every enemy still in the scene.
     }
 
 }

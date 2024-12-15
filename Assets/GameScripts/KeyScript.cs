@@ -6,18 +6,7 @@ using UnityEngine;
 public class KeyScript : MonoBehaviour
 {
    
-   
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -27,12 +16,14 @@ public class KeyScript : MonoBehaviour
             OnHit();
             Debug.Log("hit");
         }
+        
     }
     public void OnHit()
     {
         Destroy(gameObject);
         GameManager gm = GameObject.FindAnyObjectByType<GameManager>();
         gm.ShowKey();
+        //destroy the key in the scene, toggle on the key UI element so the player knows they have the key.
     }
 
     

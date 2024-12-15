@@ -13,12 +13,15 @@ public class CharacterStats : MonoBehaviour
     SpriteRenderer m_SpriteRenderer;
     Color m_NewColor;
     float m_Red, m_Blue, m_Green;
+    public AudioSource audioSource;
+    public AudioClip hitHurt;
     
 
     // Start is called before the first frame update
     void Start()
     {
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = gameObject.GetComponent<AudioSource>();
         //calling the component of the sprite that renders it to access the colour of the player character
     }
 
@@ -54,7 +57,9 @@ public class CharacterStats : MonoBehaviour
         {
             OnPlayerDamage();
             health = health - 2;
+            audioSource.PlayOneShot(hitHurt);
             //when the player steps on a hazard left by destroyed shrubs, they take two damage.
+            //play damage sound
         }
     }
     private void OnCollisionEnter2D(Collision2D other)
@@ -63,7 +68,9 @@ public class CharacterStats : MonoBehaviour
         {
             OnPlayerDamage();
             health = health - 5;
+            audioSource.PlayOneShot(hitHurt);
             //if the player walks into an enemy they take five damage.
+            //play damage sound
         }
     }
 }

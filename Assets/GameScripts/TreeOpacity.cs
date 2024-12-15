@@ -8,7 +8,7 @@ public class TreeOpacity : MonoBehaviour
     SpriteRenderer m_SpriteRenderer;
     
 
-
+    //This script sets the alpha to transparent when a player is under a tree
     private void OnTriggerEnter2D(Collider2D other)
     {
 
@@ -31,19 +31,7 @@ public class TreeOpacity : MonoBehaviour
         }
 
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-
-        
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 
 
 }
