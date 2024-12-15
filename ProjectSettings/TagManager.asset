@@ -8,6 +8,7 @@ TagManager:
   - Shrub
   - Enemy
   - BadShrub
+  - Key
   layers:
   - Default
   - TransparentFX

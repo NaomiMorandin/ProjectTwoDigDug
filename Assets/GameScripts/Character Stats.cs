@@ -49,7 +49,7 @@ public class CharacterStats : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("hit");
+        
         if (other.gameObject.CompareTag("BadShrub"))
         {
             OnPlayerDamage();

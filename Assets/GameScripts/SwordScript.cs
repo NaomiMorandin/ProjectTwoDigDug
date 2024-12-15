@@ -22,23 +22,13 @@ public class SwordScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        Debug.Log("hit");
+        
         if (other != null && other.gameObject.CompareTag("Enemy"))
             //defensive code, checks for null before using the perameter, failsafe
         {
             other.gameObject.SetActive(false);
-            DestroyEnemy();
+            
         }
     }
-    private void DestroyEnemy()
-    {
-        //when enemy destroyed, check if enemyCount == 0
-        GameManager gm = GameObject.FindAnyObjectByType<GameManager>();
-        gm.enemyCount--;
 
-        if (gm.enemyCount <= 0)
-        {
-            gm.ShowWinUI();
-        }
-    }
 }

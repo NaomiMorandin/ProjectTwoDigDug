@@ -12,7 +12,7 @@ public class TreeOpacity : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        Debug.Log("tree");
+       
         if (other != null && other.gameObject.CompareTag("Player"))
         //defensive code, checks for null before using the perameter, failsafe
         {
@@ -23,7 +23,7 @@ public class TreeOpacity : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
 
-        Debug.Log("tree");
+        
         if (other != null && other.gameObject.CompareTag("Player"))
         //defensive code, checks for null before using the perameter, failsafe
         {

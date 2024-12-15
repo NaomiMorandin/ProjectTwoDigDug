@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public CharacterStats cs;
     public GameObject youWin;
     public GameObject startOver;
-    public int enemyCount = 0;
+    public GameObject key;
     public bool canMove = true;
     
    
@@ -21,8 +21,7 @@ public class GameManager : MonoBehaviour
     {
        
         
-        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        //enemy count is set to the number of game objects with the tag Enemy
+        
         
 
     }
@@ -33,6 +32,14 @@ public class GameManager : MonoBehaviour
 
        
 
+    }
+    public void ShowKey()
+    {
+        key.SetActive(true);
+    }
+    public void HideKey()
+    {
+        key.SetActive(false);
     }
 
     public void TutorialButton()
@@ -56,8 +63,7 @@ public class GameManager : MonoBehaviour
     public void YouWin()
     {
 
-        SceneManager.LoadScene("Start Game");
-        //when you win function is called, set the UI for winning active and 
+        SceneManager.LoadScene(0);
     }
     
 }
